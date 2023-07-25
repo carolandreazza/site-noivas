@@ -134,7 +134,8 @@ body.inteco-boxed .inteco-body-wrapper{ margin-top: 0px; margin-bottom: 0px; }
 .inteco-logo{ padding-bottom: 60px; } 
 .inteco-logo-inner{ max-width: 307px; } 
 @media only screen and (max-width: 999px){ .inteco-mobile-header .inteco-logo-inner{ max-width: 90px; } } 
-@media only screen and (max-width: 767px){ .inteco-mobile-header .inteco-logo-inner{ max-width: 70px; } } 
+@media only screen and (max-width: 767px){ .inteco-mobile-header .inteco-logo-inner{ max-width: 70px; } 
+.inteco-header-background, .inteco-sticky-menu-placeholder, .inteco-header-style-boxed.inteco-fixed-navigation{ background-color: #6b0c0b !important; } } 
 .inteco-navigation, .inteco-header-right-social{ padding-top: 88px; }.inteco-navigation-top{ top: 88px; } 
 .inteco-navigation .sf-menu > li > a{ padding-bottom: 20px; } 
 .inteco-navigation .inteco-main-menu{ padding-right: 0px; } 
@@ -224,7 +225,7 @@ body.single-post .inteco-sidebar-style-none, body.blog .inteco-sidebar-style-non
 .inteco-top-bar .inteco-top-bar-right-social a, .inteco-body .inteco-header-right-social a{ color: #ffffff; } 
 .inteco-top-bar .inteco-top-bar-right-social a:hover, .inteco-body .inteco-header-right-social a:hover{ color: #d6beba; } 
 /* .inteco-header-background, .inteco-sticky-menu-placeholder, .inteco-header-style-boxed.inteco-fixed-navigation{ background-color: #0f0f0f; }  */
-.inteco-header-background, .inteco-sticky-menu-placeholder, .inteco-header-style-boxed.inteco-fixed-navigation{ background-color: #6b0c0b; } 
+.inteco-header-background, .inteco-sticky-menu-placeholder, .inteco-header-style-boxed.inteco-fixed-navigation{ background-color: #43424265; } 
 .inteco-header-wrap.inteco-header-style-plain{ border-color: #e8e8e8; } 
 .inteco-header-side-nav.inteco-style-side-toggle .inteco-logo{ background-color: #ffffff; } 
 .inteco-header-style-plain.inteco-style-float-left .inteco-logo-bottom-divider{ background: #d18687; }.inteco-header-style-plain.inteco-style-float-left .inteco-logo-bottom-divider{background: -webkit-linear-gradient(to left, rgba(179, 154, 150, 1), rgba(179, 154, 150, 0.1)); background: -o-linear-gradient(to left, rgba(179, 154, 150, 1), rgba(179, 154, 150, 0.1)); background: -moz-linear-gradient(to left, rgba(179, 154, 150, 1), rgba(179, 154, 150, 0.1)); background: linear-gradient(to left, rgba(179, 154, 150, 1), rgba(179, 154, 150, 0.1)); } 

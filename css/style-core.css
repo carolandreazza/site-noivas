@@ -605,7 +605,7 @@ button {
 }
 
 img {
-	max-width: 240%;
+	max-width: 120%;
 	height: auto;
 }
 
@@ -5843,6 +5843,11 @@ html.mm-opening.inteco-mmenu-right .inteco-mobile-header {
         padding-right: 40px !important;
         padding-left: 40px !important;
     }
+	
+	img {
+		max-width: 240%;
+		height: auto;
+	}
 }
 
 @media only screen and (max-width: 767px) {
