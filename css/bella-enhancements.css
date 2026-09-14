@@ -1,11 +1,18 @@
 /* Home hero: lightweight, responsive replacement for the legacy slider. */
 .bella-hero {
     background: #171717;
+    cursor: grab;
     height: min(66.42vw, 890px);
     min-height: 420px;
     overflow: hidden;
     position: relative;
+    touch-action: pan-y;
+    user-select: none;
     width: 100%;
+}
+
+.bella-hero.is-dragging {
+    cursor: grabbing;
 }
 
 .bella-hero-slide {
