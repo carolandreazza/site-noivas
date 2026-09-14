@@ -85,10 +85,26 @@
 }
 
 @media only screen and (max-width: 767px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .bella-hero {
         aspect-ratio: 3 / 2;
+        background: #000;
         height: auto;
+        margin-left: calc(50% - 50vw);
         min-height: 0;
+        width: 100vw;
+    }
+
+    .bella-hero-slide,
+    .bella-hero-slide img {
+        inset: 0;
+        max-width: none;
+        width: 100%;
     }
 
     .bella-hero-slide p {
@@ -110,17 +126,24 @@
     /* Full-screen, opaque overlay avoids the page showing through the menu. */
     .inteco-overlay-menu-content {
         background: #0d0808 !important;
-        height: 100dvh;
+        bottom: 0 !important;
+        box-sizing: border-box;
+        height: 100dvh !important;
+        left: 0 !important;
         overflow-y: auto;
+        right: 0 !important;
+        top: 0 !important;
+        width: 100vw !important;
     }
 
     .inteco-overlay-menu-row {
         display: flex;
-        min-height: 100%;
+        min-height: 100dvh;
+        width: 100%;
     }
 
     .inteco-overlay-menu-cell {
-        align-items: center;
+        align-items: flex-start;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -130,7 +153,7 @@
         box-sizing: border-box;
         margin: 0 auto;
         max-width: 360px;
-        padding: 84px 28px 42px;
+        padding: 90px 28px 38px;
         width: 100%;
     }
 
@@ -138,7 +161,7 @@
         left: auto;
         margin: 0;
         right: 22px;
-        top: 20px;
+        top: 22px;
     }
 
     .inteco-overlay-menu-content ul.menu > li {
