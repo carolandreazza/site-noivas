@@ -6,6 +6,9 @@
     var dots = Array.prototype.slice.call(hero.querySelectorAll('.bella-hero-dots button'));
     var activeIndex = 0;
     var timer;
+    var dragStartX = null;
+    var dragStartY = null;
+    var activePointerId = null;
 
     function showSlide(index) {
         activeIndex = (index + slides.length) % slides.length;
@@ -35,6 +38,38 @@
             startAutoplay();
         });
     });
+
+    function finishDrag(event) {
+        if (dragStartX === null || (activePointerId !== null && event.pointerId !== activePointerId)) return;
+
+        var distanceX = event.clientX - dragStartX;
+        var distanceY = event.clientY - dragStartY;
+        var isHorizontalGesture = Math.abs(distanceX) > Math.abs(distanceY);
+
+        if (isHorizontalGesture && Math.abs(distanceX) >= 40) {
+            showSlide(activeIndex + (distanceX < 0 ? 1 : -1));
+            startAutoplay();
+        }
+
+        hero.classList.remove('is-dragging');
+        dragStartX = null;
+        dragStartY = null;
+        activePointerId = null;
+    }
+
+    hero.addEventListener('pointerdown', function (event) {
+        if (event.target.closest('.bella-hero-dots')) return;
+
+        dragStartX = event.clientX;
+        dragStartY = event.clientY;
+        activePointerId = event.pointerId;
+        hero.classList.add('is-dragging');
+        hero.setPointerCapture(event.pointerId);
+        window.clearInterval(timer);
+    });
+
+    hero.addEventListener('pointerup', finishDrag);
+    hero.addEventListener('pointercancel', finishDrag);
 
     hero.addEventListener('mouseenter', function () { window.clearInterval(timer); });
     hero.addEventListener('mouseleave', startAutoplay);
