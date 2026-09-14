@@ -175,6 +175,15 @@
         margin-bottom: 0;
         padding: 14px 0;
     }
+
+    /* Keep the methodology background behind the complete final text column. */
+    #metodologia {
+        background-color: #e6e6e6;
+    }
+
+    #gdlr-core-column-4 .gdlr-core-pbf-column-content-margin {
+        padding-bottom: 60px !important;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
